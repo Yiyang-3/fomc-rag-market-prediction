@@ -11,7 +11,6 @@ An NLP and retrieval-augmented forecasting pipeline that converts FOMC statement
 [![RAG](https://img.shields.io/badge/RAG-Historical%20Case%20Memory-7C3AED)](#02--historical-case-memory)
 [![Backtest](https://img.shields.io/badge/Backtest-Expanding%20Window-B45309)](#03--multi-asset-modeling)
 
-![FOMC RAG Predicting overview](assets/readme_hero.svg)
 
 </div>
 
