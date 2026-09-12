@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-05-25T22:37:37",
+  "train_ratio": 0.6,
+  "split_rule": "target-specific chronological split inside each target's non-missing initial expanding window",
+  "target_splits": [
+    {
+      "target": "SPY_ret",
+      "available_nonnull_rows": 222,
+      "initial_window_size": 74,
+      "train_size": 44,
+      "validation_size": 30,
+      "initial_start_date": "2000-02-02 00:00:00",
+      "initial_end_date": "2008-04-30 00:00:00",
+      "train_start_date": "2000-02-02 00:00:00",
+      "train_end_date": "2005-02-02 00:00:00",
+      "validation_start_date": "2005-03-22 00:00:00",
+      "validation_end_date": "2008-04-30 00:00:00"
+    },
+    {
+      "target": "QQQ_ret",
+      "available_nonnull_rows": 222,
+      "initial_window_size": 74,
+      "train_size": 44,
+      "validation_size": 30,
+      "initial_start_date": "2000-02-02 00:00:00",
+      "initial_end_date": "2008-04-30 00:00:00",
+      "train_start_date": "2000-02-02 00:00:00",
+      "train_end_date": "2005-02-02 00:00:00",
+      "validation_start_date": "2005-03-22 00:00:00",
+      "validation_end_date": "2008-04-30 00:00:00"
+    },
+    {
+      "target": "GLD_ret",
+      "available_nonnull_rows": 180,
+      "initial_window_size": 60,
+      "train_size": 36,
+      "validation_size": 24,
+      "initial_start_date": "2004-12-14 00:00:00",
+      "initial_end_date": "2011-08-09 00:00:00",
+      "train_start_date": "2004-12-14 00:00:00",
+      "train_end_date": "2008-10-07 00:00:00",
+      "validation_start_date": "2008-10-29 00:00:00",
+      "validation_end_date": "2011-08-09 00:00:00"
+    },
+    {
+      "target": "UUP_ret",
+      "available_nonnull_rows": 162,
+      "initial_window_size": 55,
+      "train_size": 33,
+      "validation_size": 22,
+      "initial_start_date": "2007-03-21 00:00:00",
+      "initial_end_date": "2013-03-20 00:00:00",
+      "train_start_date": "2007-03-21 00:00:00",
+      "train_end_date": "2010-06-23 00:00:00",
+      "validation_start_date": "2010-08-10 00:00:00",
+      "validation_end_date": "2013-03-20 00:00:00"
+    }
+  ],
+  "feature_set": "baseline",
+  "targets": [
+    "SPY_ret",
+    "QQQ_ret",
+    "GLD_ret",
+    "UUP_ret"
+  ],
+  "model_families": [
+    "ridge",
+    "lasso",
+    "elasticnet",
+    "hgbdt",
+    "xgboost"
+  ],
+  "outputs": {
+    "regression_grid": "/Users/duanshuyan/Desktop/文本分析大作业/outputs/modeling/tuning/baseline_tuning_20260525_221743/baseline_regression_grid.csv",
+    "classification_grid": "/Users/duanshuyan/Desktop/文本分析大作业/outputs/modeling/tuning/baseline_tuning_20260525_221743/baseline_classification_grid.csv",
+    "best_params": "/Users/duanshuyan/Desktop/文本分析大作业/outputs/modeling/tuning/baseline_tuning_20260525_221743/baseline_best_params.csv"
+  },
+  "regression_selection_metric": "MAE",
+  "classification_selection_metric": "balanced_accuracy"
+}
