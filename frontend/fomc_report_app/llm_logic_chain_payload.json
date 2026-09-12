@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a rigorous financial event-study analyst. Write an English RAG historical-case logic-chain report using only the supplied structured evidence and model output. Do not invent facts or provide investment advice."
+    },
+    {
+      "role": "user",
+      "content": "Explain the multi-asset predictions, policy-shock transmission, retrieved historical cases, uncertainty, and model boundaries. Use Markdown and preserve every supplied numeric result."
+    }
+  ]
+}

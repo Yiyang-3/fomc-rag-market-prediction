@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FOMC-RAG-Predicting</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-nav" aria-label="Report navigation">
+        <div class="brand">
+          <span class="brand-mark">F</span>
+          <div>
+            <strong>FOMC Report</strong>
+            <span>hgbdt / fusion</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#overview" class="active">Overview</a>
+          <a href="#predictions">Predictions</a>
+          <a href="#evidence">Evidence</a>
+        </nav>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Model Result to User Report</p>
+            <h1>FOMC-RAG-Predicting</h1>
+          </div>
+          <div class="top-actions">
+            <a class="icon-link" href="/docs/experiment_report.md" target="_blank" rel="noreferrer">Research report</a>
+          </div>
+        </header>
+
+        <section id="overview" class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Current Event</p>
+              <h2 id="event-title">Current FOMC event</h2>
+            </div>
+            <div class="status-strip">
+              <span id="model-chip"></span>
+              <span id="experiment-chip"></span>
+            </div>
+          </div>
+
+          <div class="question-panel">
+            <label for="question-input">User question</label>
+            <textarea id="question-input" rows="3"></textarea>
+            <label for="current-statement-input">Current statement</label>
+            <textarea id="current-statement-input" rows="8"></textarea>
+            <label for="previous-statement-input">Previous statement</label>
+            <textarea id="previous-statement-input" rows="5"></textarea>
+            <div class="question-actions">
+              <button class="control-button primary" id="generate-llm-report">Retrieve cases, predict, and generate report</button>
+              <span id="generation-status">Enter a question to generate a report</span>
+            </div>
+          </div>
+
+          <div class="metric-grid" id="metric-grid"></div>
+
+          <div class="split-layout">
+            <article class="panel">
+              <div class="panel-head">
+                <h3>Event information</h3>
+              </div>
+              <dl class="event-list" id="event-list"></dl>
+              <p class="statement" id="statement-excerpt"></p>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <h3>Market state</h3>
+              </div>
+              <div class="state-grid" id="market-state"></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="predictions" class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Quantitative Forecast</p>
+              <h2>Multi-asset forecast</h2>
+            </div>
+            <button class="control-button" id="copy-report">Copy report</button>
+          </div>
+
+          <div class="asset-grid" id="asset-grid"></div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Asset</th>
+                  <th>Direction</th>
+                  <th>Predicted return</th>
+                  <th>90% interval</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-table"></tbody>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>HGBDT/fusion evaluation</h3>
+            </div>
+            <div class="eval-grid" id="evaluation-grid"></div>
+          </div>
+        </section>
+
+        <section id="evidence" class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Evidence Chain</p>
+              <h2>Policy shocks and historical cases</h2>
+            </div>
+          </div>
+
+          <div class="split-layout">
+            <article class="panel">
+              <div class="panel-head">
+                <h3>Policy-shock decomposition</h3>
+              </div>
+              <div class="shock-list" id="shock-list"></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <h3>Similar historical cases</h3>
+              </div>
+              <div class="case-list" id="case-list"></div>
+            </article>
+          </div>
+
+          <article class="panel logic-panel">
+            <div class="panel-head">
+              <h3>LLM logic-chain report</h3>
+              <div class="button-row">
+                <button class="control-button" id="copy-llm-report">Copy LLM report</button>
+                <button class="control-button" id="export-llm-pdf">Export PDF</button>
+              </div>
+            </div>
+            <div class="llm-report" id="llm-report"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app_data.js?v=20260527_2"></script>
+    <script src="app.js?v=20260527_2"></script>
+  </body>
+</html>
