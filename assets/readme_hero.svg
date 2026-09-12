@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">FOMC RAG Predicting project overview</title>
+  <desc id="desc">A text-to-signal pipeline with four asset forecasts and model metrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="1" stop-color="#102d42"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#53d5b3"/>
+      <stop offset="1" stop-color="#62a8ff"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="520" rx="26" fill="url(#bg)"/>
+  <circle cx="1110" cy="45" r="180" fill="#246b86" opacity=".15"/>
+  <circle cx="90" cy="520" r="210" fill="#2f9c8d" opacity=".11"/>
+  <text x="72" y="90" fill="#83e6cb" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">TEXT  •  RAG  •  MULTI-ASSET MODELS</text>
+  <text x="72" y="145" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="750">FOMC RAG Predicting</text>
+  <text x="72" y="184" fill="#b8c9d6" font-family="Inter,Arial,sans-serif" font-size="20">From policy language to auditable market forecasts</text>
+
+  <g filter="url(#shadow)" font-family="Inter,Arial,sans-serif">
+    <rect x="72" y="238" width="198" height="94" rx="16" fill="#122f42" stroke="#315267"/>
+    <text x="92" y="270" fill="#8ea5b6" font-size="13">INPUT</text>
+    <text x="92" y="303" fill="#fff" font-size="19" font-weight="700">FOMC statements</text>
+    <rect x="304" y="238" width="198" height="94" rx="16" fill="#122f42" stroke="#315267"/>
+    <text x="324" y="270" fill="#8ea5b6" font-size="13">STRUCTURE</text>
+    <text x="324" y="303" fill="#fff" font-size="19" font-weight="700">5 policy shocks</text>
+    <rect x="536" y="238" width="198" height="94" rx="16" fill="#122f42" stroke="#315267"/>
+    <text x="556" y="270" fill="#8ea5b6" font-size="13">MEMORY</text>
+    <text x="556" y="303" fill="#fff" font-size="19" font-weight="700">Historical cases</text>
+    <rect x="768" y="238" width="198" height="94" rx="16" fill="#122f42" stroke="#315267"/>
+    <text x="788" y="270" fill="#8ea5b6" font-size="13">OUTPUT</text>
+    <text x="788" y="303" fill="#fff" font-size="19" font-weight="700">SPY · QQQ · GLD · UUP</text>
+    <path d="M276 285h20M508 285h20M740 285h20" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="72" y="390" width="245" height="72" rx="14" fill="#0c2233" stroke="#204256"/>
+    <text x="92" y="418" fill="#8ea5b6" font-size="13">BEST DIRECTION ACCURACY</text>
+    <text x="92" y="449" fill="#53d5b3" font-size="27" font-weight="750">55.94%</text>
+    <rect x="337" y="390" width="245" height="72" rx="14" fill="#0c2233" stroke="#204256"/>
+    <text x="357" y="418" fill="#8ea5b6" font-size="13">RAG-MEMORY AVERAGE</text>
+    <text x="357" y="449" fill="#62a8ff" font-size="27" font-weight="750">54.24%</text>
+    <rect x="602" y="390" width="245" height="72" rx="14" fill="#0c2233" stroke="#204256"/>
+    <text x="622" y="418" fill="#8ea5b6" font-size="13">OUT-OF-SAMPLE RECORDS</text>
+    <text x="622" y="449" fill="#ffffff" font-size="27" font-weight="750">523</text>
+    <rect x="867" y="390" width="245" height="72" rx="14" fill="#0c2233" stroke="#204256"/>
+    <text x="887" y="418" fill="#8ea5b6" font-size="13">MODEL FAMILIES</text>
+    <text x="887" y="449" fill="#ffffff" font-size="27" font-weight="750">5</text>
+  </g>
+</svg>
